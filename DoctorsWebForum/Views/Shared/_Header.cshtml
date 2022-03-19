@@ -1,0 +1,79 @@
+﻿<style>
+    .navbar-center {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .header-icon {
+        margin: 0px 50px 0px 50px;
+        font-size: 25px;
+    }
+</style>
+
+<div class="navbar-header">
+    <button type="button"
+            class="navbar-toggle bg-feature-color"
+            data-toggle="collapse"
+            data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <a href="@Url.Action("Index","Home")">
+        <img class="img-logo" src="~/Content/images/logo/logo-web.jpg" />
+    </a>
+</div>
+
+<div class="navbar-collapse collapse text-center">
+    <div class="nav navbar-nav">
+        <div class="form-search">
+            <i id="searchIcon" class="fa fa-search dspl-block"></i>
+            <input id="searchInput"
+                   type="text"
+                   class="form-control form-input-search bg-main-color"
+                   placeholder="Search anything...">
+        </div>
+    </div>
+
+    <div class="nav navbar-nav navbar-brand navbar-center">
+        <a class="a-none feature-color header-icon tooltip-feature"
+           href="@Url.Action("Index","Home")"
+           data-toggle="tooltip"
+           data-placement="bottom"
+           title="Home Page">
+            <i class="fa-solid fa-house"></i>
+        </a>
+
+        <a class="a-none feature-color header-icon"
+           href="@Url.Action("Index","Home")"
+           data-toggle="tooltip"
+           data-placement="bottom"
+           title="Home Page">
+            <i class="fa-solid fa-house"></i>
+        </a>
+
+        <a class="a-none feature-color header-icon"
+           href="@Url.Action("Index","Home")"
+           data-toggle="tooltip"
+           data-placement="bottom"
+           title="Home Page">
+            <i class="fa-solid fa-house"></i>
+        </a>
+    </div>
+
+    @Html.Partial("_LoginPartial")
+</div>
+
+<script type="text/javascript">
+    document.addEventListener('click', function (e) {
+        var searchIcon = document.getElementById("searchIcon");
+        var searchInput = document.getElementById("searchInput");
+        var isClickInsideInputSearch = searchInput.contains(e.target);
+        if (isClickInsideInputSearch) {
+            searchIcon.style.display = "none";
+        } else {
+            searchIcon.style.display = "block"
+        }
+    });
+</script>

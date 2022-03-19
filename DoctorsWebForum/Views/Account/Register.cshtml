@@ -1,0 +1,36 @@
+﻿@model DoctorsWebForum.Models.RegisterViewModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .register-form {
+        background-color: white;
+    }
+
+    .btn-register {
+        width: 50%;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-offset-4 col-lg-5">
+            <div class="card-signin register-form">
+                <div class="card-body">
+                    <section id="registerForm">
+                        <h2 class="title-login text-center">Register</h2>
+                        <hr />
+                        @Html.Partial("_Register")
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

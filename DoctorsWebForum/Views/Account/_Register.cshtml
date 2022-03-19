@@ -1,0 +1,99 @@
+﻿@model DoctorsWebForum.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<style>
+    .register-role {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 8px;
+    }
+
+    .mb-30 {
+        margin-bottom: 30px;
+    }
+</style>
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group mb-30">
+        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group mb-30">
+        @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group mb-30">
+        @Html.LabelFor(m => m.Role, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            <span class="register-role">
+                <label>User</label>
+                @Html.RadioButtonFor(m => m.Role, "Client", new { @checked = true })
+            </span>
+
+            <span class="register-role" style="margin:8px;">
+                <label>Doctor</label>
+                @Html.RadioButtonFor(m => m.Role, "Doctor")
+            </span>
+        </div>
+    </div>
+
+    <div class="form-group mb-30">
+        @Html.LabelFor(m => m.Gender, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            <span class="register-role">
+                <label>Male</label>
+                @Html.RadioButtonFor(m => m.Gender, "male", new { @checked = true })
+            </span>
+
+            <span class="register-role" style="margin:8px;">
+                <label>Female</label>
+                @Html.RadioButtonFor(m => m.Gender, "female")
+            </span>
+
+            <span class="register-role" style="margin:8px;">
+                <label>Other</label>
+                @Html.RadioButtonFor(m => m.Gender, "other")
+            </span>
+        </div>
+    </div>
+
+    <div class="form-group mb-30">
+        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group text-center">
+        <div class="col-md-12">
+            <input type="submit" class="btn btn-success btn-register" value="Register" />
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

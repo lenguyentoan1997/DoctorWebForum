@@ -1,0 +1,147 @@
+﻿/*--------------------------------------Header Css-----------------------------------------------------*/
+@import url(css/header/header.css);
+/*--------------------------------------Header Css-----------------------------------------------------*/
+
+/*--------------------------------------Footer Css-----------------------------------------------------*/
+@import url(css/footer/footer.css);
+/*--------------------------------------Footer Css-----------------------------------------------------*/
+
+
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #f0f2f5;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    /*max-width: 280px;*/
+}
+
+.dspl-none {
+    display: none;
+}
+
+.dspl-block {
+    display: block;
+}
+
+.dspl-contents {
+    display: contents;
+}
+
+.a-none {
+    text-decoration: none;
+}
+
+    .a-none:hover {
+        text-decoration: none;
+    }
+
+.text-end {
+    text-align: end;
+}
+
+.bg-color-white {
+    background-color: white;
+}
+
+.bd-color-white {
+    border-color: white;
+}
+
+.bg-main-color {
+    background-color: #f0f2f5;
+}
+
+.bg-feature-color {
+    background-color: #55b5e5;
+    border: #55b5e5;
+}
+
+.feature-color {
+    color: #55b5e5;
+}
+
+.pt-30 {
+    padding-top: 30px;
+}
+.pt-20 {
+    padding-top: 20px;
+}
+.pt-10 {
+    padding-top: 10px;
+}
+
+.pr-30 {
+    padding-right: 30px;
+}
+.pr-20 {
+    padding-right: 20px;
+}
+.pr-10 {
+    padding-right: 10px;
+}
+
+.pb-30{
+    padding-bottom:30px;
+}.pb-20{
+    padding-bottom:20px;
+}.pb-10{
+    padding-bottom:10px;
+}
+
+.pl-30 {
+    padding-left: 30px;
+}
+
+.pl-20 {
+    padding-left: 20px;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+
+/*Set Box-shadow*/
+.card-signin {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.5);
+}
+
+    .card-signin .card-title {
+        margin-bottom: 2rem;
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+
+    .card-signin .card-body {
+        padding: 2rem;
+    }
+
+/*Set color-tooltip*/
+.tooltip-feature ~ .tooltip > .tooltip-inner {
+    background-color: #55b5e5;
+}
+
+.tooltip-feature ~ .tooltip > .tooltip-arrow {
+    border-bottom-color: #55b5e5;
+}
